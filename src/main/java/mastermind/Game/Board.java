@@ -35,7 +35,7 @@ public class Board {
 
     private void endGame(Answer lastAnswer) {
         if(Objects.equals(lastAnswer.getRP_Pegs(), Rules.NUMBERS_OF_PEGS)){
-            System.out.println("\nCongrats you did it within " + (this.getGuesses().size()+1) + " guesses");
+            System.out.println("\nCongrats you did it within " + (this.getGuesses().size()) + " guesses");
         } else {
             System.out.println("You have no more tries, the secret code was : " + Board.secretCode);
         }

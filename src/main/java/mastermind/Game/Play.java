@@ -14,11 +14,13 @@ public class Play {
 
     public Play(Guess guess) {
         this.guess = guess;
+        this.answer = new Answer();
         this.evalPlay();
     }
 
     public void evalPlay(){
-        this.answer = this.getGuess().computeAnswer();
-        System.out.println(guess.computeAnswer());
+        this.setAnswer(this.getGuess().computeAnswer());
+        System.out.println("There is " + this.getAnswer().getRP_Pegs() + " Peg.s at the right position and " 
+        + this.getAnswer().getWP_Pegs() + " right Peg.s at the wrong spot");
     }
 }
